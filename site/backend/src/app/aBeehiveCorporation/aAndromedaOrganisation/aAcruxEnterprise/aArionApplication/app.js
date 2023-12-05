@@ -4,24 +4,24 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser')
 const fileUpload = require('express-fileupload')
 const cors = require('cors')
-const errorHandler = require('../../../../love/cMiddleware/aError');
+const errorHandler = require('../../../../../love/cMiddleware/aError');
 
-const baseRoute = require('../../../../love/aMCR/bCommon/cRoute/aSetting/aBaseRoute');
-const menuRoute = require('../../../../love/aMCR/bCommon/cRoute/bAdministration/cMenuRoute');
-const roleRoute = require('../../../../love/aMCR/bCommon/cRoute/bAdministration/bRoleRoute');
-const userRoute = require('../../../../love/aMCR/bCommon/cRoute/bAdministration/aUserRoute');
-const heroRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/aHeroRoute');
-const counterRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/bCounterRoute');
-const aboutRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/cAboutRoute');
-const serviceRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/dServiceRoute');
-const branchRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/eBranchRoute');
-const subBranchRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/fSubBranchRoute');
-const subSubBranchRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/gSubSubBranchRoute');
-const projectSectionRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/hProjectSectionRoute');
-const projectGroupRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/iProjectGroupRoute');
-const projectRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/jProjectRoute');
+const baseRoute = require('../../../../../love/aMCR/bCommon/cRoute/aSetting/aBaseRoute');
+const menuRoute = require('../../../../../love/aMCR/bCommon/cRoute/bAdministration/cMenuRoute');
+const roleRoute = require('../../../../../love/aMCR/bCommon/cRoute/bAdministration/bRoleRoute');
+const userRoute = require('../../../../../love/aMCR/bCommon/cRoute/bAdministration/aUserRoute');
+const heroRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/aHeroRoute');
+const counterRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/bCounterRoute');
+const aboutRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/cAboutRoute');
+const serviceRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/dServiceRoute');
+const branchRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/eBranchRoute');
+const subBranchRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/fSubBranchRoute');
+const subSubBranchRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/gSubSubBranchRoute');
+const projectSectionRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/hProjectSectionRoute');
+const projectGroupRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/iProjectGroupRoute');
+const projectRoute = require('../../../../../love/aMCR/bCommon/cRoute/cMain/jProjectRoute');
 
-const homePageRoute = require('../../../../love/aMCR/cCommonCombined/cRoute/HomePageRoute');
+const homePageRoute = require('../../../../../love/aMCR/cCommonCombined/cRoute/HomePageRoute');
 
 // App
 const app = express()
