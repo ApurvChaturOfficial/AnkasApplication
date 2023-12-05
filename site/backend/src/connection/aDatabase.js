@@ -9,16 +9,27 @@ const database = () => {
             switch (process.env.ORGANISATION) {
                 case 'AndromedaOrganisation':
                     
-                    switch (process.env.APPLICATION) {
-                        case 'AcruxApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AcruxApplication"
+                    switch (process.env.ENTERPRISE) {
+                        case 'AcruxEnteprise':
+
+                            switch (process.env.APPLICATION) {
+                                case 'ArionApplication':
+                                    DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/ArionApplication"
+                                    break;
+                                case 'AnkasApplication':
+                                    DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AnkasApplication"
+                                    break;
+                                case 'AbolApplication':
+                                    DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AbolApplication"
+                                    break;
+                                default:
+                                    break;
+                            }   
                             break;
-                        case 'AlberioApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AlberioApplication"
+
+                        case 'AnserEnteprise':
                             break;
-                        case 'AlhenaApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AlhenaApplication"
-                            break;
+                            
                         default:
                             break;
                     }   
