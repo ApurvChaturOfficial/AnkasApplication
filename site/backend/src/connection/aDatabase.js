@@ -73,17 +73,43 @@ const database = () => {
                 case 'TadpoleOrganisation':
     
                     switch (process.env.ENTERPRISE) {
-                        case 'BellatrixEnteprise':
+                        case 'AquilaEnteprise':
                             break;
+
                         case 'BellatrixEnteprise':
+                            
+                            switch (process.env.APPLICATION) {
+                                case 'TechfolioApplication':
+
+                                    switch (process.env.APPLICATION1) {
+                                        case 'Self':
+                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/TechfolioApplication"
+                                            break;
+                                        case 'ApurvChaturApplication':
+                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/ApurvChaturApplication"
+                                            break;
+                                        case 'AnushreeMandapeApplication':
+                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AnushreeMandapeApplication"
+                                            break;
+                                        case 'SofieBerkinApplication':
+                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/SofieBerkinApplication"
+                                            break;
+                                        default:
+                                            break;
+                                    }   
+                                    break;
+                                default:
+                                    break;
+                            }   
                             break;
-                        case 'BellatrixEnteprise':
+                            
+                        case 'CapellaEnteprise':
                             break;
                         default:
                             break;
                     }   
                     break;
-            }  
+        }  
             break;
     
         default:
