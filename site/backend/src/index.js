@@ -90,9 +90,26 @@ switch (process.env.CORPORATION) {
                     case 'BellatrixEnteprise':
 
                         switch (process.env.APPLICATION) {
-                            case 'TechfolioFirmApplication':
-                                var app = require("./app/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirmApplication/app")
+                            case 'TechfolioApplication':
+
+                                switch (process.env.APPLICATION1) {
+                                    case 'Self':
+                                        var app = require("./app/aBeehiveCorporation/aAndromedaOrganisation/aAcruxEnterprise/aArionApplication/app")
+                                        break;
+                                    case 'ApurvChaturApplication':
+                                        var app = require("./app/aBeehiveCorporation/aAndromedaOrganisation/aAcruxEnterprise/bAnkasApplication/app")
+                                        break;
+                                    case 'AnushreeMandapeApplication':
+                                        var app = require("./app/aBeehiveCorporation/aAndromedaOrganisation/aAcruxEnterprise/cAbolApplication/app")
+                                        break;
+                                    case 'SofieBerkinApplication':
+                                        var app = require("./app/aBeehiveCorporation/aAndromedaOrganisation/aAcruxEnterprise/cAbolApplication/app")
+                                        break;
+                                    default:
+                                        break;
+                                }   
                                 break;
+
                             default:
                                 break;
                         }   
