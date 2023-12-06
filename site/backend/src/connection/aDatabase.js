@@ -50,6 +50,12 @@ const database = () => {
                         case 'TadpoleApplication':
                             DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/TadpoleApplication"
                             break;
+                        case 'AcruxApplication':
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AcruxApplication"
+                            break;
+                        case 'AnserApplication':
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AnserApplication"
+                            break;
                         case 'AquilaApplication':
                             DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AquilaApplication"
                             break;
