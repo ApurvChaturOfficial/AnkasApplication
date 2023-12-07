@@ -125,7 +125,7 @@ const database = () => {
         useUnifiedTopology: true,
     })
     .then(response => {
-        console.log(`Great!... Mongo DB connected with ${process.env.APPLICATION} on server: ${response.connection.host}`)
+        console.log(`Great!... Mongo DB connected with ${process.env.APPLICATION} ${process.env.APPLICATION1} on server: ${response.connection.host}`)
     })
     // .catch(error => {
     //     console.log(error)
