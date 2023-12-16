@@ -34,8 +34,8 @@ app.use(fileUpload())
 app.use(cors({ origin:  
   process.env.ENVIRONMENT === "Production" ?
   [
-    "https://techfolio-admin.netlify.app",
-    "https://techfolio-frontend.netlify.app",
+    "https://sofie-berkin-admin.netlify.app",
+    "https://sofie-berkin-frontend.netlify.app",
   ] : 
   [
     "http://localhost:5173",
