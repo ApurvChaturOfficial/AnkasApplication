@@ -36,8 +36,8 @@ app.use(fileUpload())
 app.use(cors({ origin:  
   process.env.ENVIRONMENT === "Production" ?
   [
-    "https://acrux-admin.netlify.app",
-    "https://acrux-frontend.netlify.app",
+    "https://anser-admin.netlify.app",
+    "https://anser-frontend.netlify.app",
   ] : 
   [
     "http://localhost:5173",

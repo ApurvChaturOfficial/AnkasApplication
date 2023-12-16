@@ -36,8 +36,8 @@ app.use(fileUpload())
 app.use(cors({ origin:  
   process.env.ENVIRONMENT === "Production" ?
   [
-    "https://acrux-admin.netlify.app",
-    "https://acrux-frontend.netlify.app",
+    "https://aquila-admin.netlify.app",
+    "https://aquila-frontend.netlify.app",
   ] : 
   [
     "http://localhost:5173",

@@ -89,21 +89,21 @@ switch (process.env.CORPORATION) {
                         
                     case 'BellatrixEnteprise':
 
-                        switch (process.env.APPLICATION) {
-                            case 'TechfolioApplication':
+                        switch (process.env.FIRM) {
+                            case 'TechfolioFirm':
 
-                                switch (process.env.APPLICATION1) {
-                                    case 'Self':
-                                        var app = require("./app/aBeehiveCorporation/aAndromedaOrganisation/aAcruxEnterprise/aArionApplication/app")
+                                switch (process.env.APPLICATION) {
+                                    case 'TechfolioApplication':
+                                        var app = require("./app/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioAppliation/app")
                                         break;
                                     case 'ApurvChaturApplication':
-                                        var app = require("./app/aBeehiveCorporation/aAndromedaOrganisation/aAcruxEnterprise/bAnkasApplication/app")
+                                        var app = require("./app/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bApurvChaturApplication/app")
                                         break;
                                     case 'AnushreeMandapeApplication':
-                                        var app = require("./app/aBeehiveCorporation/aAndromedaOrganisation/aAcruxEnterprise/cAbolApplication/app")
+                                        var app = require("./app/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/cAnushreeMandapeApplication/app")
                                         break;
                                     case 'SofieBerkinApplication':
-                                        var app = require("./app/aBeehiveCorporation/aAndromedaOrganisation/aAcruxEnterprise/cAbolApplication/app")
+                                        var app = require("./app/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/dSofieBerkinApplication/app")
                                         break;
                                     default:
                                         break;

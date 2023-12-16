@@ -78,11 +78,11 @@ const database = () => {
 
                         case 'BellatrixEnteprise':
                             
-                            switch (process.env.APPLICATION) {
-                                case 'TechfolioApplication':
+                            switch (process.env.FIRM) {
+                                case 'TechfolioFirm':
 
-                                    switch (process.env.APPLICATION1) {
-                                        case 'Self':
+                                    switch (process.env.APPLICATION) {
+                                        case 'TechfolioApplication':
                                             DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/TechfolioApplication"
                                             break;
                                         case 'ApurvChaturApplication':
@@ -125,7 +125,7 @@ const database = () => {
         useUnifiedTopology: true,
     })
     .then(response => {
-        console.log(`Great!... Mongo DB connected with ${process.env.APPLICATION} ${process.env.APPLICATION1} on server: ${response.connection.host}`)
+        console.log(`Great!... Mongo DB connected with ${process.env.APPLICATION} on server: ${response.connection.host}`)
     })
     // .catch(error => {
     //     console.log(error)
