@@ -14,13 +14,13 @@ const database = () => {
 
                             switch (process.env.APPLICATION) {
                                 case 'ArionApplication':
-                                    DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/ArionApplication"
+                                    DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/ArionApplicationUltimate"
                                     break;
                                 case 'AnkasApplication':
-                                    DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AnkasApplication"
+                                    DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AnkasApplicationUltimate"
                                     break;
                                 case 'AbolApplication':
-                                    DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AbolApplication"
+                                    DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AbolApplicationUltimate"
                                     break;
                                 default:
                                     break;
@@ -39,31 +39,31 @@ const database = () => {
     
                     switch (process.env.APPLICATION) {
                         case 'BeehiveApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/BeehiveApplication"
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/BeehiveApplicationUltimate"
                             break;
                         case 'AndromedaApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AndromedaApplication"
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AndromedaApplicationUltimate"
                             break;
                         case 'PinwheelApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/PinwheelApplication"
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/PinwheelApplicationUltimate"
                             break;
                         case 'TadpoleApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/TadpoleApplication"
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/TadpoleApplicationUltimate"
                             break;
                         case 'AcruxApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AcruxApplication"
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AcruxApplicationUltimate"
                             break;
                         case 'AnserApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AnserApplication"
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AnserApplicationUltimate"
                             break;
                         case 'AquilaApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AquilaApplication"
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AquilaApplicationUltimate"
                             break;
                         case 'BellatrixApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/BellatrixApplication"
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/BellatrixApplicationUltimate"
                             break;
                         case 'CapellaApplication':
-                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/CapellaApplication"
+                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/CapellaApplicationUltimate"
                             break;
                         default:
                             break;
@@ -83,16 +83,16 @@ const database = () => {
 
                                     switch (process.env.APPLICATION) {
                                         case 'TechfolioApplication':
-                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/TechfolioApplication"
+                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/TechfolioApplicationUltimate"
                                             break;
                                         case 'ApurvChaturApplication':
-                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/ApurvChaturApplication"
+                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/ApurvChaturApplicationUltimate"
                                             break;
                                         case 'AnushreeMandapeApplication':
-                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AnushreeMandapeApplication"
+                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/AnushreeMandapeApplicationUltimate"
                                             break;
                                         case 'SofieBerkinApplication':
-                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/SofieBerkinApplication"
+                                            DB_URL = "mongodb+srv://AlwaysCoolUser:AlwaysCool@apurvchatur.ods89az.mongodb.net/SofieBerkinApplicationUltimate"
                                             break;
                                         default:
                                             break;
