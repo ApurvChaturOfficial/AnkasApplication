@@ -19,4 +19,4 @@ schema.pre("save", async function() {
   this.aSlug = slugify(this.aTitle);
 })
 
-module.exports = mongoose.model("ProgramModel", schema)
+module.exports = mongoose.model("AcruxProgramModel", schema)

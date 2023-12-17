@@ -23,4 +23,4 @@ schema.pre("save", async function() {
   this.aSlug = slugify(this.aTitle);
 })
 
-module.exports = mongoose.model("ServiceModel", schema)
+module.exports = mongoose.model("PinwheelServiceModel", schema)
