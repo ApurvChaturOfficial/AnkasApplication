@@ -10,16 +10,16 @@ const baseRoute = require('../../../../love/aMCR/bCommon/cRoute/aSetting/aBaseRo
 const menuRoute = require('../../../../love/aMCR/bCommon/cRoute/bAdministration/cMenuRoute');
 const roleRoute = require('../../../../love/aMCR/bCommon/cRoute/bAdministration/bRoleRoute');
 const userRoute = require('../../../../love/aMCR/bCommon/cRoute/bAdministration/aUserRoute');
-const heroRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/aHeroRoute');
-const counterRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/bCounterRoute');
-const aboutRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/cAboutRoute');
-const serviceRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/dServiceRoute');
-const branchRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/eBranchRoute');
-const subBranchRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/fSubBranchRoute');
-const subSubBranchRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/gSubSubBranchRoute');
-const projectSectionRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/hProjectSectionRoute');
-const projectGroupRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/iProjectGroupRoute');
-const projectRoute = require('../../../../love/aMCR/bCommon/cRoute/cMain/jProjectRoute');
+const heroRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/aHeroRoute');
+const counterRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/bCounterRoute');
+const aboutRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/cAboutRoute');
+const serviceRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/dServiceRoute');
+const branchRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/eBranchRoute');
+const subBranchRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/fSubBranchRoute');
+const subSubBranchRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/gSubSubBranchRoute');
+const projectSectionRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/hProjectSectionRoute');
+const projectGroupRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/iProjectGroupRoute');
+const projectRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/jProjectRoute');
 
 const homePageRoute = require('../../../../love/aMCR/cCommonCombined/cRoute/HomePageRoute');
 

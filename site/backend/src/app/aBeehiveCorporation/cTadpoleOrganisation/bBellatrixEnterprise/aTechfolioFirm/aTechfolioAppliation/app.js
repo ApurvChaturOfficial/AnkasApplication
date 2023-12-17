@@ -13,11 +13,7 @@ const userRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministr
 const heroRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/aHeroRoute');
 const counterRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/bCounterRoute');
 const aboutRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/cAboutRoute');
-const serviceRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/dServiceRoute');
-const branchRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/eBranchRoute');
-const subBranchRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/fSubBranchRoute');
-const subSubBranchRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/gSubSubBranchRoute');
-const projectSectionRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/hProjectSectionRoute');
+const serviceRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/dServiceRoute');const projectSectionRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/hProjectSectionRoute');
 const projectGroupRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/iProjectGroupRoute');
 const projectRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/jProjectRoute');
 
@@ -53,9 +49,6 @@ app.use("/api/v1/hero", heroRoute)
 app.use("/api/v1/counter", counterRoute)
 app.use("/api/v1/about", aboutRoute)
 app.use("/api/v1/service", serviceRoute)
-app.use("/api/v1/branch", branchRoute)
-app.use("/api/v1/sub-branch", subBranchRoute)
-app.use("/api/v1/sub-sub-branch", subSubBranchRoute)
 app.use("/api/v1/project-section", projectSectionRoute)
 app.use("/api/v1/project-group", projectGroupRoute)
 app.use("/api/v1/project", projectRoute)
