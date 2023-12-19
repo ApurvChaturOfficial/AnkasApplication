@@ -21,7 +21,7 @@ const projectSectionRoute = require('../../../../love/aMCR/aBeehiveCorporation/b
 const projectGroupRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/iProjectGroupRoute');
 const projectRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/jProjectRoute');
 
-const homePageRoute = require('../../../../love/aMCR/cCommonCombined/cRoute/HomePageRoute');
+const homePageRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommonCombined/cRoute/HomePageRoute');
 
 // App
 const app = express()
