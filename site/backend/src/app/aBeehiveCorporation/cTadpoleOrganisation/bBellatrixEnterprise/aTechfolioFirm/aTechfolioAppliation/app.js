@@ -10,15 +10,11 @@ const baseRoute = require('../../../../../../love/aMCR/bCommon/cRoute/aSetting/a
 const menuRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministration/cMenuRoute');
 const roleRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministration/bRoleRoute');
 const userRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministration/aUserRoute');
-const heroRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/aHeroRoute');
-const counterRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/bCounterRoute');
-const aboutRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/cAboutRoute');
-const serviceRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/dServiceRoute');
-const projectSectionRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/hProjectSectionRoute');
-const projectGroupRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/iProjectGroupRoute');
-const projectRoute = require('../../../../../../love/aMCR/bCommon/cRoute/cMain/jProjectRoute');
+const heroRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/aHeroRoute');
+const counterRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/bCounterRoute');
+const programSectionRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/cProgramSectionRoute');
+const programRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/dProgramRoute');
 
-const homePageRoute = require('../../../../../../love/aMCR/cCommonCombined/cRoute/HomePageRoute');
 
 // App
 const app = express()
@@ -48,13 +44,8 @@ app.use("/api/v1/role", roleRoute)
 app.use("/api/v1/user", userRoute)
 app.use("/api/v1/hero", heroRoute)
 app.use("/api/v1/counter", counterRoute)
-app.use("/api/v1/about", aboutRoute)
-app.use("/api/v1/service", serviceRoute)
-app.use("/api/v1/project-section", projectSectionRoute)
-app.use("/api/v1/project-group", projectGroupRoute)
-app.use("/api/v1/project", projectRoute)
-
-app.use("/api/v1/home-page", homePageRoute)
+app.use("/api/v1/program-section", programSectionRoute)
+app.use("/api/v1/program", programRoute)
 
 app.use(errorHandler)
 
