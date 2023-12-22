@@ -34,7 +34,7 @@ app.use(cors({ origin:
   process.env.ENVIRONMENT === "Production" ?
   [
     "https://capella-admin.netlify.app",
-    "https://capella-frontend.netlify.app",
+    "https://capella-frontend-soup.netlify.app",
   ] : 
   [
     "http://localhost:5173",
