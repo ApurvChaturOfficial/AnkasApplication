@@ -6,7 +6,7 @@ const defaultSchema = require('../../../../../../../../bFunction/jDefaultSchema'
 const schema = new mongoose.Schema({
   ...defaultSchema,
 
-  cProgram: [
+  cPrograms: [
     { type: mongoose.Schema.Types.ObjectId, ref: 'ProgramModel' }
   ],
 

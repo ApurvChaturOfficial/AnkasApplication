@@ -1,12 +1,12 @@
 const cloudinary = require("cloudinary")
-const catchAsyncError = require("../../../../../../bFunction/aCatchAsyncError")
-const ErrorHandler = require("../../../../../../bFunction/bErrorHandler")
-const handleImage = require("../../../../../../bFunction/hHandleImage")
-const SearchFilterPaginate = require("../../../../../../bFunction/fSearchFilterPaginate")
-const HeroModel = require("../../zCommon/aModel/cMain/aHeroModel")
-const CounterModel = require("../../zCommon/aModel/cMain/bCounterModel")
-const ProgramSectionModel = require("../../zCommon/aModel/cMain/cProgramSectionModel")
-const ProgramModel = require("../../zCommon/aModel/cMain/dProgramModel")
+const catchAsyncError = require("../../../../../../../../../bFunction/aCatchAsyncError")
+const ErrorHandler = require("../../../../../../../../../bFunction/bErrorHandler")
+const handleImage = require("../../../../../../../../../bFunction/hHandleImage")
+const SearchFilterPaginate = require("../../../../../../../../../bFunction/fSearchFilterPaginate")
+const HeroModel = require("../../../aModel/cMain/aHeroModel")
+const CounterModel = require("../../../aModel/cMain/bCounterModel")
+const ProgramSectionModel = require("../../../aModel/cMain/cProgramSectionModel")
+const ProgramModel = require("../../../aModel/cMain/dProgramModel")
 
 
 exports.homePageController = (Label= 'Home Page') => {

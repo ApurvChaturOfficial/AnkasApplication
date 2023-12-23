@@ -15,6 +15,7 @@ const counterRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cT
 const programSectionRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/cProgramSectionRoute');
 const programRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/dProgramRoute');
 
+const homePageRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/aCommonRoute/aHomePageRoute');
 
 // App
 const app = express()
@@ -46,6 +47,8 @@ app.use("/api/v1/hero", heroRoute)
 app.use("/api/v1/counter", counterRoute)
 app.use("/api/v1/program-section", programSectionRoute)
 app.use("/api/v1/program", programRoute)
+
+app.use("/api/v1/home-page", homePageRoute)
 
 app.use(errorHandler)
 
