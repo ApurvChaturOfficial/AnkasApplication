@@ -39,6 +39,7 @@ import CounterSectionComponent from './component/bCounterSectionComponent';
 import AboutAndServiceSectionComponent from './component/cAboutAndServiceSectionComponent';
 import BranchSectionComponent from './component/dBranchSectionComponent';
 import ProjectSectionComponent from './component/eProjectSectionComponent';
+import ProgramSectionComponent from './component/fProgramSectionComponent';
 
 
 const HomePageComponent = ({ Redux, ReduxUltimate }) => {
@@ -59,15 +60,16 @@ const HomePageComponent = ({ Redux, ReduxUltimate }) => {
           }}
         >
           {Redux.state.ReceivedObject?.Retrieve?.CounterList && <CounterSectionComponent Redux={Redux} />}
-          {
+          {/* {
             Redux.state.ReceivedObject?.Retrieve?.AboutRetrieve && 
             Redux.state.ReceivedObject?.Retrieve?.AboutRetrieve?.actually && 
             Redux.state.ReceivedObject?.Retrieve?.AboutRetrieve?.comparatively && 
             Redux.state.ReceivedObject?.Retrieve?.ServiceList && 
               <AboutAndServiceSectionComponent Redux={Redux} />
-          }
-          {Redux.state.ReceivedObject?.Retrieve?.BranchRetrieve && <BranchSectionComponent Redux={Redux} />}
-          {Redux.state.ReceivedObject?.Retrieve?.ProjectSectionRetrieve && <ProjectSectionComponent Redux={Redux} />}
+          } */}
+          {/* {Redux.state.ReceivedObject?.Retrieve?.BranchRetrieve && <BranchSectionComponent Redux={Redux} />} */}
+          {/* {Redux.state.ReceivedObject?.Retrieve?.ProjectSectionRetrieve && <ProjectSectionComponent Redux={Redux} />} */}
+          {Redux.state.ReceivedObject?.Retrieve?.ProgramSectionRetrieve && <ProgramSectionComponent Redux={Redux} />}
           <MKBox pt={18} pb={6}>
             <Container>
               <Grid container spacing={3}>
