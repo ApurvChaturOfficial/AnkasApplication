@@ -21,6 +21,12 @@ const eventCardRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/
 const blogRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication//cRoute/cMain/iBlogRoute');
 const blogCardRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication//cRoute/cMain/jBlogCardRoute');
 
+const homePageRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication/cRoute/cMain/zCombinedRoute/aHomePageRoute');
+const portfolioCardPageRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication/cRoute/cMain/zCombinedRoute/bPortfolioCardPageRoute');
+const eventCardPageRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication/cRoute/cMain/zCombinedRoute/cEventCardPageRoute');
+const blogCardPageRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication/cRoute/cMain/zCombinedRoute/dBlogCardPageRoute');
+
+
 // App
 const app = express()
 
@@ -57,6 +63,11 @@ app.use("/api/v1/event", eventRoute)
 app.use("/api/v1/event-card", eventCardRoute)
 app.use("/api/v1/blog", blogRoute)
 app.use("/api/v1/blog-card", blogCardRoute)
+
+app.use("/api/v1/home-page", homePageRoute)
+app.use("/api/v1/portfolio-card-page", portfolioCardPageRoute)
+app.use("/api/v1/event-card-page", eventCardPageRoute)
+app.use("/api/v1/blog-card-page", blogCardPageRoute)
 
 app.use(errorHandler)
 
