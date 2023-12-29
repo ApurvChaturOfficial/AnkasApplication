@@ -23,15 +23,15 @@ exports.homePageController = (Label= 'Home Page') => {
       let about_retrieve = await AboutModel.findOne().sort({ _id: -1 });
       let experience_retrieve = await ExperienceModel.findOne().sort({ _id: -1 });
       let service_retrieve = await ServiceModel.findOne().sort({ _id: -1 });
-      let portfolio_retrieve = await PortfolioModel.findOne().sort({ _id: -1 }).populate({
+      let portfolio_retrieve = await PortfolioModel.findOne().sort({ _id: -1 }).limit(6).populate({
         path: 'cPortfolioCards',
         model: PortfolioCardModel,
       });
-      let event_retrieve = await EventModel.findOne().sort({ _id: -1 }).populate({
+      let event_retrieve = await EventModel.findOne().sort({ _id: -1 }).limit(6).populate({
         path: 'cEventCards',
         model: EventCardModel,
       });
-      let blog_retrieve = await BlogModel.findOne().sort({ _id: -1 }).populate({
+      let blog_retrieve = await BlogModel.findOne().sort({ _id: -1 }).limit(6).populate({
         path: 'cBlogCards',
         model: BlogCardModel,
       });
