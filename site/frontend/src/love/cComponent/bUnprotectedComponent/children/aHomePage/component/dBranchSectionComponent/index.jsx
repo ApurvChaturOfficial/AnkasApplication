@@ -30,6 +30,7 @@ function BranchSectionComponent({ Redux }) {
             container
             circular
             sx={{ mb: 1 }}
+            circular
           />
           <MKTypography variant="h3" fontWeight="bold" mb={1}>
             {each.title}
