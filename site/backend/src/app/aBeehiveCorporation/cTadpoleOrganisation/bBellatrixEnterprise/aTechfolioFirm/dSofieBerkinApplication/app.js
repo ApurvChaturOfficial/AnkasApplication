@@ -36,6 +36,7 @@ app.use(cors({ origin:
   [
     "https://sofie-berkin-admin.netlify.app",
     "https://sofie-berkin-frontend.netlify.app",
+    "https://sofiebirkinn.netlify.app",
   ] : 
   [
     "http://localhost:5173",

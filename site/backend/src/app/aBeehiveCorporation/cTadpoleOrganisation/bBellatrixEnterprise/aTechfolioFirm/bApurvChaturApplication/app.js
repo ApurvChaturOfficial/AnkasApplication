@@ -42,6 +42,7 @@ app.use(cors({ origin:
   [
     "https://apurv-chatur-admin.netlify.app",
     "https://apurv-chatur-frontend.netlify.app",
+    "https://apurvchatur.netlify.app",
   ] : 
   [
     "http://localhost:5173",

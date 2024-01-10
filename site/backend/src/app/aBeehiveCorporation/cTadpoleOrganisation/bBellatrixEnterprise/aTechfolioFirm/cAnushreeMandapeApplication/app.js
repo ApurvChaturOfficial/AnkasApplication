@@ -36,6 +36,7 @@ app.use(cors({ origin:
   [
     "https://anushree-mandape-admin.netlify.app",
     "https://anushree-mandape-frontend.netlify.app",
+    "https://anushreemandape.netlify.app",
   ] : 
   [
     "http://localhost:5173",
