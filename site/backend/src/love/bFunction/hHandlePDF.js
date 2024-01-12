@@ -6,7 +6,12 @@ const handlePDF = async (target, folder, type, retrieve) => {
     if (target?.url?.startsWith("https://")) {
       return target
     } else if (target?.url?.startsWith("data:image") && !retrieve.public_id) {
-      const myCloud = await cloudinary.v2.uploader.upload(target.url);
+      const myCloud = await cloudinary.v2.uploader.upload(target.url, {
+        folder: folder,
+        // transformation: [
+        //   { width: 500, crop: 'scale' }
+        // ]
+      });
   
       return {
         public_id: myCloud.public_id,
@@ -15,7 +20,12 @@ const handlePDF = async (target, folder, type, retrieve) => {
     } else {
       await cloudinary.v2.uploader.destroy(retrieve.public_id);
 
-      const myCloud = await cloudinary.v2.uploader.upload(target.url);
+      const myCloud = await cloudinary.v2.uploader.upload(target.url, {
+        folder: folder,
+        // transformation: [
+        //   { width: 500, crop: 'scale' }
+        // ]
+      });
   
       return {
         public_id: myCloud.public_id,
@@ -23,7 +33,12 @@ const handlePDF = async (target, folder, type, retrieve) => {
       }   
     }
   } else if (type === 'create') {
-    const myCloud = await cloudinary.v2.uploader.upload(target.url);
+    const myCloud = await cloudinary.v2.uploader.upload(target.url, {
+      folder: folder,
+      // transformation: [
+      //   { width: 500, crop: 'scale' }
+      // ]
+    });
     
     return {
       public_id: myCloud.public_id,
