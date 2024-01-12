@@ -4,6 +4,7 @@ const ErrorHandler = require("../../../../../../../../bFunction/bErrorHandler")
 const handleImage = require("../../../../../../../../bFunction/hHandleImage")
 const SearchFilterPaginate = require("../../../../../../../../bFunction/fSearchFilterPaginate")
 const HeroModel = require("../../aModel/cMain/aHeroModel")
+const handlePDF = require("../../../../../../../../bFunction/hHandlePDF")
 
 
 exports.heroController = (Model= HeroModel, Label= 'Hero') => {
@@ -43,7 +44,7 @@ exports.heroController = (Model= HeroModel, Label= 'Hero') => {
 			
 			// Resume
 			request.body.dResume && (
-				request.body.dResume = await handleImage(
+				request.body.dResume = await handlePDF(
 					request.body.dResume, 
 					Label,
 					'create'
@@ -101,7 +102,7 @@ exports.heroController = (Model= HeroModel, Label= 'Hero') => {
 
 			// Resume
 			request.body.dResume && (
-				request.body.dResume = await handleImage(
+				request.body.dResume = await handlePDF(
 					request.body.dResume, 
 					Label,
 					'update',
