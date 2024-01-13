@@ -5,6 +5,7 @@ const defaultSchema = {
   aTitle      : { type: String, required: true, unique: true, trim: true },
   aSubtitle   : { type: String, required: true,               trim: true },
   aDescription: { type: String,                               trim: true },
+  aDetail     : { type: String,                               trim: true },
   aSlug       : { type: String,                               trim: true },
   aStatus     : { type: Boolean, default: true },
   aImage      : {
