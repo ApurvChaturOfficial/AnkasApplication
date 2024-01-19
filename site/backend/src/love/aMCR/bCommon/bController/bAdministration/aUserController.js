@@ -7,6 +7,9 @@ const UserModel = require("../../aModel/bAdministration/aUserModel");
 const generateCookie = require("../../../../bFunction/cGenerateCookie");
 const RoleModel = require("../../aModel/bAdministration/bRoleModel");
 const MenuModel = require("../../aModel/bAdministration/cMenuModel");
+const sendEmail = require("../../../../bFunction/iSendEmail");
+const sendMessage = require("../../../../bFunction/kSendMessage");
+const companyToCompany = require("../../../../dStaticData/aEmailData/aCompanyToCompany");
 
 
 exports.userController = (Model= UserModel, Label= 'User') => {
@@ -232,6 +235,14 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			// Create
 			const user = await Model.create(request.body)
 
+			// Send Mail - Company To Company
+			await sendEmail(option={
+				from: companyToCompany,
+				to: companyToCompany,
+				subject: "Someone Signed Up",
+				text: `User ${user.eEmail} has registered to our application`
+			})
+			
 			// Response
 			generateCookie(201, `User Registered Successfully`, `user_register`, user, response)
 		}),
@@ -256,6 +267,25 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			// Not Matched
 			if (!isPasswordMatched) next(new ErrorHandler("Invalid email or password", 401))
 
+			// Send Mail - Company To Company
+			await sendEmail(option={
+				from: companyToCompany,
+				to: companyToCompany,
+				subject: "Someone Logged In",
+				text: `User ${user.eEmail} has logged in to our application`
+			})
+
+			// Send Mail - To User
+			// await sendEmail(option={
+			// 	from: "boss",
+			// 	to: user.eEmail,
+			// 	subject: "Someone Logged In",
+			// 	text: "Logged in Successfully"
+			// })
+
+			// Send Message
+			// await sendMessage()
+
 			// Response
 			generateCookie(200, "User Logged In Successfully", "user_login", user, response)
 		}),
@@ -270,6 +300,27 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 					sameSite: "none"	
 			}
 
+			// Retrieve
+			const user = await UserModel.findById(request.user._id).populate({
+        path: 'cRole',
+        model: RoleModel,
+        populate: {
+          path: 'cMenus.menu',
+          model: MenuModel,
+        }
+			});
+
+			// Not Found
+			if (!user) next(new ErrorHandler("Invalid email or password", 401))
+
+			// Send Mail - Company To Company
+			await sendEmail(option={
+				from: companyToCompany,
+				to: companyToCompany,
+				subject: "Someone Logged Out",
+				text: `User ${user.eEmail} has logged out to our application`
+			})
+			
 			// Response
 			response.status(200).cookie('token', null, options).json({ 
 				success: true,
@@ -301,6 +352,14 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			// Message
 			const textMessage = `Reset Password Token: ${resetPasswordToken}`;
 				
+			// Send Mail - Company To Company
+			await sendEmail(option={
+				from: companyToCompany,
+				to: companyToCompany,
+				subject: "Someone Forgot Password",
+				text: `User ${user.eEmail} has forgot password to our application`
+			})
+			
 			// Response
 			response.status(200).json({
 				success: true,
@@ -343,6 +402,14 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			user.eResetPasswordToken = undefined;
 			user.eResetPasswordTokenExpire = undefined;
 			await user.save({ validateBeforeSave: false });
+			
+			// Send Mail - Company To Company
+			await sendEmail(option={
+				from: companyToCompany,
+				to: companyToCompany,
+				subject: "Someone Reset Password",
+				text: `User ${user.eEmail} has reset password to our application`
+			})
 			
 			// Response
 			generateCookie(201, `Password Recovered Successfully`, `user_reset_password`, user, response)
@@ -418,6 +485,14 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 				}
 			)
 
+			// Send Mail - Company To Company
+			await sendEmail(option={
+				from: companyToCompany,
+				to: companyToCompany,
+				subject: "Someone Updated Profile",
+				text: `User ${user.eEmail} has updated profile to our application`
+			})
+			
 			// Response
 			response.status(200).json({
 				success: true,
@@ -469,6 +544,14 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			user.ePassword = new_password;
 			await user.save();
 			
+			// Send Mail - Company To Company
+			await sendEmail(option={
+				from: companyToCompany,
+				to: companyToCompany,
+				subject: "Someone Updated Password",
+				text: `User ${user.eEmail} has updated password to our application`
+			})
+			
 			// Response
 			generateCookie(201, `${Label} Profile Password Updated Successfully`, `profile_password_update`, user, response)
 		}),
@@ -491,6 +574,14 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			// Delete
 			await object_retrieve.deleteOne({"_id": "_id"})
 
+			// Send Mail - Company To Company
+			await sendEmail(option={
+				from: companyToCompany,
+				to: companyToCompany,
+				subject: "Someone Closed Account",
+				text: `User ${user.eEmail} has closed account to our application`
+			})
+			
 			// Response
 			response.status(200).json({
 				success: true,
