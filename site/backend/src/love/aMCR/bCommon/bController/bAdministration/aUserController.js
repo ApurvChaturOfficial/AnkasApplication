@@ -440,7 +440,7 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 		// Profile Update Controller
 		profileUpdate: catchAsyncError(async (request, response, next) => {
 			// Retrieve
-			let object_retrieve = await Model.findById(request.user._id).populate({
+			let user = await Model.findById(request.user._id).populate({
         path: 'cRole',
         model: RoleModel,
         populate: {
@@ -450,7 +450,7 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			})
 
 			// Not Found
-			if (!object_retrieve) next(new ErrorHandler(`${Label} Not Found`, 404))
+			if (!user) next(new ErrorHandler(`${Label} Not Found`, 404))
 
 			// Personal Info
 			request.body.bUpdatedAt = new Date(Date.now()),
@@ -462,7 +462,7 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 					request.body.aImage, 
 					Label,
 					'update',
-					object_retrieve.aImage
+					user.aImage
 				)      
 			)  
 			request.body.eImage && (
@@ -470,12 +470,12 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 					request.body.eImage, 
 					Label,
 					'update',
-					object_retrieve.eImage
+					user.eImage
 				)
 			)    
 
 			// Update
-			object_retrieve = await Model.findByIdAndUpdate(
+			user = await Model.findByIdAndUpdate(
 				request.user,
 				request.body, 
 				{
@@ -497,7 +497,7 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			response.status(200).json({
 				success: true,
 				message: `${Label} Profile Updated Successfully`,
-				update: object_retrieve
+				update: user
 			})
 		}),
 
@@ -559,7 +559,7 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 		// Profile Delete Controller
 		profileDelete: catchAsyncError(async (request, response, next) => {
 			// Retrieve
-			let object_retrieve = await Model.findById(request.user._id).populate({
+			let user = await Model.findById(request.user._id).populate({
 				path: 'cRole',
 				model: RoleModel,
 				populate: {
@@ -569,10 +569,10 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			})
 
 			// Not Found
-			if (!object_retrieve) next(new ErrorHandler(`${Label} Not Found`, 404))
+			if (!user) next(new ErrorHandler(`${Label} Not Found`, 404))
 
 			// Delete
-			await object_retrieve.deleteOne({"_id": "_id"})
+			await user.deleteOne({"_id": "_id"})
 
 			// Send Mail - Company To Company
 			await sendEmail(option={
@@ -586,7 +586,7 @@ exports.userController = (Model= UserModel, Label= 'User') => {
 			response.status(200).json({
 				success: true,
 				message: `${Label} Profile Deleted Successfully`,
-				delete: object_retrieve
+				delete: user
 			})
 		}),
 
