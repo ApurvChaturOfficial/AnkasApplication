@@ -44,6 +44,7 @@ const schema = new mongoose.Schema({
   },
   eResetPasswordToken       : String,
   eResetPasswordTokenExpire : Date,
+  eGoogleID: { type: String },
 
   ...defaultSchema,
 

@@ -6,6 +6,7 @@ const defaultSchema = require('../../../../../../../bFunction/jDefaultSchema');
 const schema = new mongoose.Schema({
   ...defaultSchema,
 
+  dTag: { type: String },
   dType       : { type: String, enum: ['Frontend', 'Admin'] },
   dSocialLinks: [{
     title: { type: String },
