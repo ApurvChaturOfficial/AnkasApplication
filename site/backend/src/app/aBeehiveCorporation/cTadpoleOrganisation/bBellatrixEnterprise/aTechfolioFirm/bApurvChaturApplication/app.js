@@ -7,6 +7,7 @@ const cors = require('cors')
 const errorHandler = require('../../../../../../love/cMiddleware/aError');
 
 const baseRoute = require('../../../../../../love/aMCR/bCommon/cRoute/aSetting/aBaseRoute');
+const adminHeroRoute = require('../../../../../../love/aMCR/bCommon/cRoute/aSetting/bAdminHeroRoute');
 const menuRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministration/cMenuRoute');
 const roleRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministration/bRoleRoute');
 const userRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministration/aUserRoute');
@@ -20,6 +21,7 @@ const eventRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTad
 const eventCardRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication//cRoute/cMain/hEventCardRoute');
 const blogRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication//cRoute/cMain/iBlogRoute');
 const blogCardRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication//cRoute/cMain/jBlogCardRoute');
+const staticDataRoute = require('../../../../../../love/aMCR/bCommon/cRoute/dAsset/aStaticDataRoute');
 
 const homePageRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication/cRoute/cMain/zCombinedRoute/aHomePageRoute');
 const portfolioCardPageRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/bCommonApplication/cRoute/cMain/zCombinedRoute/bPortfolioCardPageRoute');
@@ -51,6 +53,7 @@ app.use(cors({ origin:
 credentials: true }))
 
 app.use("/api/v1/base", baseRoute)
+app.use("/api/v1/admin-hero", adminHeroRoute)
 app.use("/api/v1/menu", menuRoute)
 app.use("/api/v1/role", roleRoute)
 app.use("/api/v1/user", userRoute)
@@ -64,6 +67,7 @@ app.use("/api/v1/event", eventRoute)
 app.use("/api/v1/event-card", eventCardRoute)
 app.use("/api/v1/blog", blogRoute)
 app.use("/api/v1/blog-card", blogCardRoute)
+app.use("/api/v1/static-data", staticDataRoute)
 
 app.use("/api/v1/home-page", homePageRoute)
 app.use("/api/v1/portfolio-card-page", portfolioCardPageRoute)

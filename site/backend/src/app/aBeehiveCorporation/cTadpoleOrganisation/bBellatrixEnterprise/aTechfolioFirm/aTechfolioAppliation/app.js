@@ -7,6 +7,7 @@ const cors = require('cors')
 const errorHandler = require('../../../../../../love/cMiddleware/aError');
 
 const baseRoute = require('../../../../../../love/aMCR/bCommon/cRoute/aSetting/aBaseRoute');
+const adminHeroRoute = require('../../../../../../love/aMCR/bCommon/cRoute/aSetting/bAdminHeroRoute');
 const menuRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministration/cMenuRoute');
 const roleRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministration/bRoleRoute');
 const userRoute = require('../../../../../../love/aMCR/bCommon/cRoute/bAdministration/aUserRoute');
@@ -14,6 +15,7 @@ const heroRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadp
 const counterRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/bCounterRoute');
 const programSectionRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/cProgramSectionRoute');
 const programRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/dProgramRoute');
+const staticDataRoute = require('../../../../../../love/aMCR/bCommon/cRoute/dAsset/aStaticDataRoute');
 
 const homePageRoute = require('../../../../../../love/aMCR/aBeehiveCorporation/cTadpoleOrganisation/bBellatrixEnterprise/aTechfolioFirm/aTechfolioApplication/cRoute/cMain/aCommonRoute/aHomePageRoute');
 
@@ -40,6 +42,7 @@ app.use(cors({ origin:
 credentials: true }))
 
 app.use("/api/v1/base", baseRoute)
+app.use("/api/v1/admin-hero", adminHeroRoute)
 app.use("/api/v1/menu", menuRoute)
 app.use("/api/v1/role", roleRoute)
 app.use("/api/v1/user", userRoute)
@@ -47,6 +50,7 @@ app.use("/api/v1/hero", heroRoute)
 app.use("/api/v1/counter", counterRoute)
 app.use("/api/v1/program-section", programSectionRoute)
 app.use("/api/v1/program", programRoute)
+app.use("/api/v1/static-data", staticDataRoute)
 
 app.use("/api/v1/home-page", homePageRoute)
 

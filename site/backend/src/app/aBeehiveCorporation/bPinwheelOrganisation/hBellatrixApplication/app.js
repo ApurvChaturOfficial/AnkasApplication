@@ -7,6 +7,7 @@ const cors = require('cors')
 const errorHandler = require('../../../../love/cMiddleware/aError');
 
 const baseRoute = require('../../../../love/aMCR/bCommon/cRoute/aSetting/aBaseRoute');
+const adminHeroRoute = require('../../../../love/aMCR/bCommon/cRoute/aSetting/bAdminHeroRoute');
 const menuRoute = require('../../../../love/aMCR/bCommon/cRoute/bAdministration/cMenuRoute');
 const roleRoute = require('../../../../love/aMCR/bCommon/cRoute/bAdministration/bRoleRoute');
 const userRoute = require('../../../../love/aMCR/bCommon/cRoute/bAdministration/aUserRoute');
@@ -17,6 +18,7 @@ const serviceRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwhee
 const projectSectionRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/hProjectSectionRoute');
 const projectGroupRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/iProjectGroupRoute');
 const projectRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommon/cRoute/cMain/jProjectRoute');
+const staticDataRoute = require('../../../../love/aMCR/bCommon/cRoute/dAsset/aStaticDataRoute');
 
 const homePageRoute = require('../../../../love/aMCR/aBeehiveCorporation/bPinwheelOrganisation/zCommonCombined/cRoute/HomePageRoute');
 
@@ -43,6 +45,7 @@ app.use(cors({ origin:
 credentials: true }))
 
 app.use("/api/v1/base", baseRoute)
+app.use("/api/v1/admin-hero", adminHeroRoute)
 app.use("/api/v1/menu", menuRoute)
 app.use("/api/v1/role", roleRoute)
 app.use("/api/v1/user", userRoute)
@@ -53,6 +56,7 @@ app.use("/api/v1/service", serviceRoute)
 app.use("/api/v1/project-section", projectSectionRoute)
 app.use("/api/v1/project-group", projectGroupRoute)
 app.use("/api/v1/project", projectRoute)
+app.use("/api/v1/static-data", staticDataRoute)
 
 app.use("/api/v1/home-page", homePageRoute)
 
